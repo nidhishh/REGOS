@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sonder",
+    "name": "Sonder",
+    "level": 1,
+    "type": "pm",
+    "path": "C:\\Users\\colos\\OneDrive\\Desktop\\product\\decks",
+    "github": "https://github.com/nidhishh/Sonder",
+    "blurb": "Product teardown + feature proposal: 3-minute live vibe checks for Bumble/Hinge.",
+    "theme": { "bg": "#ff5a36", "fg": "#2b0a00", "acc": "#fff0d6", "style": "so", "band": "SWIPE LESS ★ TALK MORE ★ FEEL THE VIBE ★" }
+  },
+  {
+    "id": "architectos",
+    "name": "ArchitectOS",
+    "level": 2,
+    "type": "code",
+    "path": "C:\\Users\\colos\\Downloads\\ArchitectOS-master",
+    "github": "https://github.com/nidhishh/ArchitectOS",
+    "blurb": "Panel next to your code editor that turns a codebase into a live architecture graph.",
+    "theme": { "bg": "#04110a", "fg": "#d8ffe8", "acc": "#39ff88", "style": "ar", "band": "READ CODE ★ SEE SYSTEMS ★ SHIP WEIRD ★" }
+  },
+  {
+    "id": "deck-agent",
+    "name": "Deck Agent",
+    "level": 3,
+    "type": "code",
+    "path": "C:\\Users\\colos\\product_deck",
+    "github": "https://github.com/nidhishh/deck-agent",
+    "blurb": "Pipeline that turns raw product research into NextLeap-style case study decks.",
+    "theme": { "bg": "#0a1a3a", "fg": "#eaf2ff", "acc": "#2bd9ff", "band": "RESEARCH IN ★ STORY OUT ★ NO MORE BLANK SLIDES ★" }
+  },
+  {
+    "id": "casely",
+    "name": "Casely",
+    "level": 4,
+    "type": "code",
+    "path": "C:\\Users\\colos\\casecraft-platform",
+    "github": "https://github.com/nidhishh/case-craft-",
+    "blurb": "LeetCode for business interviews — timed cases with an AI interviewer that pushes back.",
+    "theme": { "bg": "#2a0a12", "fg": "#ffe9ee", "acc": "#ff5c8a", "band": "PRACTICE CASES ★ GET PUSHED BACK ★ LEVEL UP ★" }
+  },
+  {
+    "id": "hq",
+    "name": "Chief of Staff",
+    "type": "hq",
+    "path": ".",
+    "blurb": "Looks across every project and helps you decide what to work on today.",
+    "theme": { "bg": "#000000", "fg": "#ffffff", "acc": "#ff2bd6", "band": "PICK ONE ★ FINISH IT ★ SHIP WEIRD ★" }
+  }
+]

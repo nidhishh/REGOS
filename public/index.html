@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a0033">
+  <title>REGOS</title>
+  <!-- pixel "R" favicon in the portfolio's hero colors (purple + yellow) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'><rect width='8' height='8' fill='%231a0033'/><path fill='%23ffe600' d='M2 1h3v1H2zM2 2h1v5H2zM5 2h1v2H5zM3 4h2v1H3zM4 5h1v1H4zM5 6h1v1H5z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- same fonts as the portfolio: Press Start 2P (headings), VT323 (body), Fredoka (Sonder), JetBrains Mono (ArchitectOS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Fredoka:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">R</span>
+        <span class="brand-name">REGOS</span>
+      </div>
+      <nav>
+        <button class="nav-item" data-view="home">
+          <span class="nav-icon" aria-hidden="true">★</span><span class="nav-text"><span class="nav-label">SELECT LEVEL</span></span>
+        </button>
+        <div class="nav-heading">LEVELS</div>
+        <div id="project-nav"></div>
+        <div class="nav-heading">HQ</div>
+        <div id="hq-nav"></div>
+      </nav>
+      <div class="sidebar-foot">THINK WEIRD ★ BUILD WEIRD ★ SHIP WEIRD</div>
+    </aside>
+
+    <main id="main"></main>
+  </div>
+
+  <template id="tpl-project">
+    <section class="project">
+      <div class="ghost-text" aria-hidden="true"></div>
+      <header class="project-head">
+        <div class="project-title">
+          <p class="tag p-tag"></p>
+          <h1 class="p-name"></h1>
+          <div class="p-meta"></div>
+        </div>
+        <div class="project-actions">
+          <button class="btn ghost" data-open="vscode" title="Open folder in VS Code">VS CODE</button>
+          <button class="btn ghost" data-open="folder" title="Open folder in Explorer">FOLDER</button>
+          <button class="btn ghost" data-open="terminal" title="Continue this conversation in an interactive Claude Code terminal">TERMINAL</button>
+        </div>
+      </header>
+      <div class="tabs">
+        <button class="tab active" data-tab="chat">CHAT</button>
+        <button class="tab" data-tab="progress">QUEST LOG</button>
+        <div class="tab-spacer"></div>
+        <button class="btn small ghost" data-action="save-progress" title="Ask the agent to update PROGRESS.md from this conversation">SAVE GAME</button>
+        <button class="btn small ghost" data-action="new-session" title="Start a fresh conversation (PROGRESS.md is kept)">NEW GAME</button>
+      </div>
+
+      <div class="pane chat-pane">
+        <div class="messages" aria-live="polite"></div>
+        <div class="composer">
+          <div class="chips"></div>
+          <div class="composer-box">
+            <textarea rows="2" placeholder="> message the agent_   (Enter to send, Shift+Enter for new line)"></textarea>
+            <div class="composer-row">
+              <div class="mode" role="radiogroup" aria-label="Mode">
+                <button class="mode-btn active" data-mode="talk" role="radio" aria-checked="true">TALK</button>
+                <button class="mode-btn" data-mode="build" role="radio" aria-checked="false">BUILD</button>
+              </div>
+              <span class="mode-hint"></span>
+              <button class="btn primary send">SEND ▶</button>
+              <button class="btn danger stop" hidden>STOP ■</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane progress-pane" hidden>
+        <div class="progress-bar">
+          <span class="progress-path"></span>
+          <button class="btn small ghost edit-progress">EDIT</button>
+          <button class="btn small primary save-edit" hidden>SAVE</button>
+          <button class="btn small ghost cancel-edit" hidden>CANCEL</button>
+        </div>
+        <article class="markdown progress-view"></article>
+        <textarea class="progress-editor" hidden spellcheck="false"></textarea>
+      </div>
+    </section>
+  </template>
+
+  <script defer src="/app.js"></script>
+</body>
+</html>

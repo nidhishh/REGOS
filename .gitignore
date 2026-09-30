@@ -1,0 +1,8 @@
+# chat logs, session ids, generated prompts, progress backups
+data/
+node_modules/
+
+# personal project notes — kept on this PC only (repo is public)
+REGOS.md
+projects/*/PROGRESS.md
+projects/*/AGENT.md
